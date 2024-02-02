@@ -132,7 +132,9 @@ bash cd /home/user/documents
  mkdir new_folder
 ```
 7. rm - Remove: Delete files or directories.
-Example: rm file.txt
+```bash
+   rm file.txt
+```
 9. cat - Concatenate and Display: View the content of a file.
 ```bash
  cat file.txt
@@ -267,27 +269,27 @@ echo "command" | at 15:30
 ```
 46. lsof - List Open Files: List open files and processes using them.
 ```bash
- lsof -i :port ```
+ lsof -i :port 
 ```
 47. nc - Netcat: Networking utility to read and write data across network connections.
 ```bash
- echo "Hello" | nc host port ```
+ echo "Hello" | nc host port 
 ```
 48. scp - Secure Copy Between Hosts: Copy files securely between hosts.
  ```bash
- scp file.txt user@remote_host:/path ```
+ scp file.txt user@remote_host:/path 
 ```
 50. sed - Stream Editor: Text manipulation using regex.
  ```bash
-sed 's/old/new/g' file.txt ```
+sed 's/old/new/g' file.txt 
 ```
 52. awk - Text Processing: Pattern scanning and text processing.
  ```bash
-awk '{print $2}' file.txt ```
+awk '{print $2}' file.txt 
 ```
 54. cut - Text Column Extraction: Extract specific columns from text.
  ```bash
- cut -d"," -f2 file.csv ```
+ cut -d"," -f2 file.csv 
 ```
 ## LINUX NETWORKING COMMAND
 
@@ -296,7 +298,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Query DNS to obtain domain-related information.**
 **Example:**
 ```bash
-`nslookup example.com`
+nslookup example.com
 ```
 **Explanation: Useful for troubleshooting DNS issues, checking domain information, and resolving IP addresses.**
 
@@ -305,7 +307,7 @@ awk '{print $2}' file.txt ```
 **Purpose: A versatile DNS tool for querying DNS servers.**
 **Example:**
 ```bash 
-`dig example.com`
+dig example.com
 ```
 **Explanation: Provides detailed DNS information, useful for debugging and obtaining specific record types.**
 
@@ -316,7 +318,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Connect to a remote server to test network connectivity.**
 **Example:**
 ```bash 
-`telnet example.com 80` 
+telnet example.com 80
 ```
 **Explanation: Useful for checking if a specific port on a remote server is reachable.**
 
@@ -327,7 +329,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Trace the route packets take to reach a destination.**
 **Example:** 
 ```bash
-`traceroute example.com`
+traceroute example.com
 ```
 **Explanation: Helps identify network issues and understand the path packets take through the internet.**
 
@@ -338,7 +340,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Display and configure network interfaces.**
 **Example:** 
 ```bash
-`ifconfig`
+ifconfig
 ```
 **Explanation: View current network interface configurations and assign IP addresses.**
 
@@ -347,7 +349,7 @@ awk '{print $2}' file.txt ```
 **Purpose: A versatile command for network configuration.**
 **Example:**
 ```bash 
-`ip addr show` 
+ip addr show 
 ```
 **Explanation: Provides more detailed information than ifconfig and allows advanced network configuration.**
 
@@ -358,7 +360,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Establish TCP/UDP connections, making it a versatile networking tool.**
 **Example:**
 ```bash
-`nc -zv example.com 80` 
+nc -zv example.com 80 
 ```
 **Explanation: Useful for checking if a port is open and for simple network testing.**
 
@@ -367,7 +369,7 @@ awk '{print $2}' file.txt ```
 **Purpose: Display network statistics and connections.**
 Example:
  ```bash 
- `netstat -tulpn`
+ netstat -tulpn
 ```
 **Explanation: Helps monitor active network connections, ports, and routing tables.**
 
@@ -376,7 +378,7 @@ Example:
 **Purpose: Capture and analyze network traffic.**
 **Example:**
 ```bash
-`tcpdump -i eth0`
+tcpdump -i eth0
 ```
 **Explanation: Useful for debugging network issues, analyzing packets, and monitoring network activity.**
 
@@ -385,7 +387,7 @@ Example:
 **Purpose: Download files from the internet.**
 **Example:**
 ```bash
-`wget https://example.com/file.txt`
+wget https://example.com/file.txt
 ```
 **Explanation: Simplifies downloading files, and is useful for fetching resources from the web.**
 
@@ -394,7 +396,7 @@ Example:
 **Purpose: Transfer data from or to a server.**
 **Example:** 
 ```bash 
-`curl https://example.com/api` 
+curl https://example.com/api 
 ```
 **Explanation: Supports a variety of protocols and is handy for testing APIs and fetching web content.**
 
@@ -405,7 +407,7 @@ Example:
 **Purpose: Set permissions on files or directories.**
 **Example:** 
 ```bash
-`setfacl -m u:jane:rw file.txt`
+setfacl -m u:jane:rw file.txt
 ```
 **Explanation: Allows fine-grained control over file and directory permissions.**
 
@@ -414,7 +416,7 @@ Example:
 **Purpose: Display or manipulate the ARP cache.**
 **Example:** 
 ```
-bash `arp -a`
+bash `arp -a
 ```
 **Explanation: Shows a mapping between IP addresses and MAC addresses on the local network**.
 .
@@ -423,7 +425,7 @@ bash `arp -a`
 **Purpose: Display or manipulate the IP routing table.**
 **Example:**
 ```bash 
-`route -n` 
+route -n 
 ```
 **Explanation: Helps monitor active network connections, ports, and routing tables.**
 
