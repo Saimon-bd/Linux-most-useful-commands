@@ -115,18 +115,20 @@ HELP
 ##                                                                                   LINUX COMMAND FOR DEVOPS
 
 1. ls - List Files and Directories: List the contents of a directory.
-Example: ls -l
-
-2. cd - Change Directory: Navigate to a different directory.
+Example:
+```bash
+ls -l
+```
+3. cd - Change Directory: Navigate to a different directory.
 Example: cd /home/user/documents
 
-3. pwd - Print Working Directory: Display the current directory's full path.
+4. pwd - Print Working Directory: Display the current directory's full path.
 Example: pwd
 
-4. mkdir - Make Directory: Create a new directory.
+5. mkdir - Make Directory: Create a new directory.
 Example: mkdir new_folder
 
-5. rm - Remove: Delete files or directories.
+6. rm - Remove: Delete files or directories.
 Example: rm file.txt
 
 9. cat - Concatenate and Display: View the content of a file.
