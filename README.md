@@ -71,7 +71,7 @@ EXIT WITHOUT SAVING CHANGES
 `:q!` : Quit without saving changes
 
 
-###                                                                    NANO EDITOR SHORTCUTS
+##                                                                    NANO EDITOR SHORTCUTS
 
 NAVIGATION
 
@@ -112,7 +112,7 @@ HELP
 
 `Ctrl + X` : Close nano (it will ask to save changes)
 
-###                                                                                   LINUX COMMAND FOR DEVOPS
+##                                                                                   LINUX COMMAND FOR DEVOPS
 
 1. ls - List Files and Directories: List the contents of a directory.
 Example: ls -l
@@ -246,7 +246,7 @@ Example: awk '{print $2}' file.txt
 48. cut - Text Column Extraction: Extract specific columns from text.
 Example: cut -d"," -f2 file.csv
 
-### LINUX NETWORKING COMMAND
+## LINUX NETWORKING COMMAND
 
 nslookup:
 
@@ -262,7 +262,7 @@ Example: `dig example.com`
 Explanation: Provides detailed DNS information, useful for debugging and
 obtaining specific record types
 
-###                                                                           CONNECTIVITY TESTING COMMAND
+##                                                                           CONNECTIVITY TESTING COMMAND
 
 telnet:
 
@@ -270,7 +270,7 @@ Purpose: Connect to a remote server to test network connectivity.
 Example: `telnet example.com 80`
 Explanation: Useful for checking if a specific port on a remote server is reachable.
 
-###                                                                           CONNECTIVITY TESTING COMMAND
+##                                                                           CONNECTIVITY TESTING COMMAND
 
 ncc:
 
@@ -279,7 +279,7 @@ Example: `traceroute example.com`
 Explanation: Helps identify network issues and understand the path packets
 take through the internet.
 
-###                                                                             IP ADDRESS CONFIGURATION
+##                                                                             IP ADDRESS CONFIGURATION
 
 ifconfig:
 
@@ -293,7 +293,7 @@ Purpose: A versatile command for network configuration.
 Example: `ip addr show`
 Explanation: Provides more detailed information than ifconfig and allows advanced network configuration.
 
-###                                                                                NETWORK TOOLS
+##                                                                                NETWORK TOOLS
 
 netcat (nc):
 
@@ -325,7 +325,7 @@ Purpose: Transfer data from or to a server.
 Example: `curl https://example.com/api`
 Explanation: Supports a variety of protocols and is handy for testing APIs and fetching web content.
 
-###                                                               ACL , ARP, AND ROUTE TABLE COMMANDS:
+##                                                               ACL , ARP, AND ROUTE TABLE COMMANDS:
 
 ACL (Access Control List):
 
@@ -351,7 +351,7 @@ Purpose: Display or manipulate the IP routing table.
 Example: `route -n`
 Explanation: Helps monitor active network connections, ports, and routing tables.
 
-###                                                                                     NAMESPACE
+##                                                                                     NAMESPACE
 
 Create a veth virtual-interface pair
 
