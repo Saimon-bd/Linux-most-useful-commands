@@ -374,12 +374,11 @@ sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 .
 ### Bring up the interfaces (the veth interfaces and the loopback interfaces)
-
 ```bash
 sudo ip netns exec 'mynamespace-1' ip link set 'lo' up
 
 sudo ip netns exec 'mynamespace-1' ip link set 'eth0' up
-```
+
 
 
 
