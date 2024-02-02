@@ -1,5 +1,5 @@
 # Linux-most-useful-commands
-All Most useful Linux commands and Tools for a DevOps Engineer needed.
+All the Most useful Linux commands and Tools for a DevOps Engineer are needed.
 
 ##                                                                                 VI (VIM) EDITOR COMMANDS:
 
@@ -115,20 +115,19 @@ HELP
 ##                                                                                   LINUX COMMAND FOR DEVOPS
 
 1. ls - List Files and Directories: List the contents of a directory.
-2. Example:
 ```bash
 ls -l
 ```
 3. cd - Change Directory: Navigate to a different directory.
-Example: cd /home/user/documents
+```bash cd /home/user/documents ```
 
-4. pwd - Print Working Directory: Display the current directory's full path.
+5. pwd - Print Working Directory: Display the current directory's full path.
 Example: pwd
 
-5. mkdir - Make Directory: Create a new directory.
+6. mkdir - Make Directory: Create a new directory.
 Example: mkdir new_folder
 
-6. rm - Remove: Delete files or directories.
+7. rm - Remove: Delete files or directories.
 Example: rm file.txt
 
 9. cat - Concatenate and Display: View the content of a file.
