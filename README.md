@@ -229,36 +229,36 @@ Example: usermod -aG groupname username
 Example: passwd username
 
 43. lsof - List Open Files: List open files and processes using them.
-Example: lsof -i :port
+Example: ```bash lsof -i :port ```
 
 44. nc - Netcat: Networking utility to read and write data across network connections.
-Example: echo "Hello" | nc host port
+Example: ```bash echo "Hello" | nc host port ```
 
 45. scp - Secure Copy Between Hosts: Copy files securely between hosts.
-Example: scp file.txt user@remote_host:/path
+Example: ```bash scp file.txt user@remote_host:/path ```
 
 46. sed - Stream Editor: Text manipulation using regex.
-Example: sed 's/old/new/g' file.txt
+Example: ```bash sed 's/old/new/g' file.txt ```
 
 47. awk - Text Processing: Pattern scanning and text processing.
-Example: awk '{print $2}' file.txt
+Example: ```bash awk '{print $2}' file.txt ```
 
 48. cut - Text Column Extraction: Extract specific columns from text.
-Example: cut -d"," -f2 file.csv
+Example: ```bash cut -d"," -f2 file.csv ```
 
 ## LINUX NETWORKING COMMAND
 
 ### nslookup:
 
 Purpose: Query DNS to obtain domain-related information.
-Example: `nslookup example.com`
+Example: ```bash `nslookup example.com` ```
 Explanation: Useful for troubleshooting DNS issues, checking domain
 information, and resolving IP addresses.
 
 ### dig (Domain Information Groper):
 
 Purpose: A versatile DNS tool for querying DNS servers.
-Example: `dig example.com`
+Example: ```bash `dig example.com` ```
 Explanation: Provides detailed DNS information, useful for debugging and
 obtaining specific record types
 
@@ -267,7 +267,7 @@ obtaining specific record types
 ### telnet:
 
 Purpose: Connect to a remote server to test network connectivity.
-Example: `telnet example.com 80`
+Example: ```bash `telnet example.com 80` ```
 Explanation: Useful for checking if a specific port on a remote server is reachable.
 
 ##                                                                           CONNECTIVITY TESTING COMMAND
@@ -275,7 +275,7 @@ Explanation: Useful for checking if a specific port on a remote server is reacha
 ### ncc:
 
 Purpose: Trace the route packets take to reach a destination.
-Example: `traceroute example.com`
+Example: ```bash `traceroute example.com` ```
 Explanation: Helps identify network issues and understand the path packets
 take through the internet.
 
@@ -284,13 +284,13 @@ take through the internet.
 ### ifconfig:
 
 Purpose: Display and configure network interfaces.
-Example: `ifconfig`
+Example: ```bash `ifconfig` ```
 Explanation: View current network interface configurations and assign IP addresses.
 
 ### ip:
 
 Purpose: A versatile command for network configuration.
-Example: `ip addr show`
+Example: ```bash `ip addr show` ```
 Explanation: Provides more detailed information than ifconfig and allows advanced network configuration.
 
 ##                                                                                NETWORK TOOLS
@@ -298,31 +298,31 @@ Explanation: Provides more detailed information than ifconfig and allows advance
 ### netcat (nc):
 
 Purpose: Establish TCP/UDP connections, making it a versatile networking tool.
-Example: `nc -zv example.com 80`
+Example: ```bash `nc -zv example.com 80` ```
 Explanation: Useful for checking if a port is open and for simple network testing.
 
 ### netstat:
 
 Purpose: Display network statistics and connections.
-Example: `netstat -tulpn`
+Example: ```bash `netstat -tulpn` ```
 Explanation: Helps monitor active network connections, ports, and routing tables.
 
 ### tcpdump:
 
 Purpose: Capture and analyze network traffic.
-Example: `tcpdump -i eth0`
+Example: ```bash `tcpdump -i eth0` ```
 Explanation: Useful for debugging network issues, analyzing packets, and monitoring network activity.
 
 ### wget:
 
 Purpose: Download files from the internet.
-Example: `wget https://example.com/file.txt`
-Explanation:Simplifies downloading files, useful for fetching resources from the web.
+Example: ```bash `wget https://example.com/file.txt` ```
+Explanation: Simplifies downloading files, is useful for fetching resources from the web.
 
 curl:
 
 Purpose: Transfer data from or to a server.
-Example: `curl https://example.com/api`
+Example: ```bash `curl https://example.com/api` ```
 Explanation: Supports a variety of protocols and is handy for testing APIs and fetching web content.
 
 ##                                                               ACL , ARP, AND ROUTE TABLE COMMANDS:
@@ -330,48 +330,46 @@ Explanation: Supports a variety of protocols and is handy for testing APIs and f
 ### ACL (Access Control List):
 
 Purpose: Set permissions on files or directories.
-Example: `setfacl -m u:jane:rw file.txt`
+Example: ```bash `setfacl -m u:jane:rw file.txt` ```
 Explanation: Allows fine-grained control over file and directory permissions.
 
 ACL (Access Control List):
 
 Purpose: Set permissions on files or directories.
-Example: `setfacl -m u:jane:rw file.txt`
+Example: ```bash `setfacl -m u:jane:rw file.txt` ```
 Explanation: Allows fine-grained control over file and directory permissions.
 
 ### ARP Table:
 
 Purpose: Display or manipulate the ARP cache.
-Example: `arp -a`
+Example: ```bash `arp -a` ```
 Explanation: Shows a mapping between IP addresses and MAC addresses on the local network.
 .
 ### Route Table:
 
 Purpose: Display or manipulate the IP routing table.
-Example: `route -n`
+Example: ```bash `route -n` ```
 Explanation: Helps monitor active network connections, ports, and routing tables.
 
 ##                                                                                     NAMESPACE
 
 ### Create a veth virtual-interface pair
-
+```bash
 sudo ip link add 'myns-1-eth0' type veth peer name 'myns-2-eth0'
-.
+```
 ### Assign the interfaces to the namespaces
-
+```bash
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
-
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
-
+```
 ### Assign an address to the network interface
-
+```bash
 sudo ip netns exec 'mynamespace-1' ip addr add 192.168.1.1/24 dev eth0
-
+```
 ### Assign the interfaces to the namespaces
 
 ```bash
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
-
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 ```
 
@@ -379,7 +377,6 @@ sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 ### Bring up the interfaces (the veth interfaces and the loopback interfaces)
 ```bash
 sudo ip netns exec 'mynamespace-1' ip link set 'lo' up
-
 sudo ip netns exec 'mynamespace-1' ip link set 'eth0' up
 ```
 
