@@ -3,14 +3,14 @@ All Most useful Linux commands and Tools for a DevOps Engineer needed.
 
 ##                                                                                 VI (VIM) EDITOR COMMANDS:
 
-NAVIGATION
+### NAVIGATION
 
 `h` : Move cursor left
 `j` : Move cursor dow
 `k` : Move cursor up
 `l` : Move cursor right
 
-EDITING
+### EDITING
 
 `i` : Insert mode (start inserting before the cursor)
 `a` : Append mode (start inserting after the cursor)
@@ -19,7 +19,7 @@ EDITING
 `yy` : Yank (copy) the current line
 `p` : Paste the yanked or deleted text
 
-SAVE AND QUIT
+### SAVE AND QUIT
 
 `h`	: Move cursor left
 `j`	: Move cursor dow
@@ -33,78 +33,78 @@ SAVE AND QUIT
 `k` : Move cursor up
 `l` : Move cursor right
 
-SEARCH AND REPLACE
+### SEARCH AND REPLACE
 
 /pattern` : Search for 'pattern'
 `:s/old/new/g` : Replace 'old' with 'new' in the entire file
 
-UNDO AND REDO
+### UNDO AND REDO
 
 `u`: Undo
 `Ctrl + r` : Redo
 
-COPY AND PASTE (VISUAL MODE)
+### COPY AND PASTE (VISUAL MODE)
 
 `v` : Enter Visual mode
 `V` : Enter Visual Line mode
 `y` : Yank selected text
 
-MOVING BETWEEN WORDS
+### MOVING BETWEEN WORDS
 
 `0` : Move to the beginning of the line
 `$` : Move to the end of the line
 `:n` : Move to line number 'n'
 
-NAVIGATING BY LINE
+### NAVIGATING BY LINE
 
 `0` : Move to the beginning of the line
 `$` : Move to the end of the line
 `:n` : Move to line number 'n'
 
-OPEN AND SAVE FILES
+### OPEN AND SAVE FILES
 
 `:e filename` : Open a file
 `:w filename` : Save as a different filename
 
-EXIT WITHOUT SAVING CHANGES
+### EXIT WITHOUT SAVING CHANGES
 
 `:q!` : Quit without saving changes
 
 
 ##                                                                    NANO EDITOR SHORTCUTS
 
-NAVIGATION
+### NAVIGATION
 
 `Alt + A` : Mark text for copying
 `Ctrl + K` : Cut marked text
 `Ctrl + U` : Paste cut text
 
-EDITING
+### EDITING
 
 `Ctrl + k` : Cut (delete) the current line
 `Ctrl + u` : Paste the cut text
 `Ctrl + o` : Write changes to the file
 `Ctrl + x` : Exit nano
 
-SEARCH AND REPLACE
+### SEARCH AND REPLACE
 
 `Ctrl + w` : Search for text
 `Ctrl + \` : Replace text
 
-COPY AND PASTE
+### COPY AND PASTE
 
 `Ctrl + f` : Move forward one page
 `Ctrl + b` : Move backward one page
 `Ctrl + arrow keys` : Move cursor by word
 
-EDITING
+### EDITING
 
 `Ctrl + k` : Cut (delete) the current line
 `Ctrl + u` : Paste the cut text
 `Ctrl + o` : Write changes to the file
 `Ctrl + x` : Exit nano
 
-LINE NUMBERS
+### LINE NUMBERS
 
 Alt + ,` : Go to line number
 
@@ -248,14 +248,14 @@ Example: cut -d"," -f2 file.csv
 
 ## LINUX NETWORKING COMMAND
 
-nslookup:
+### nslookup:
 
 Purpose: Query DNS to obtain domain-related information.
 Example: `nslookup example.com`
 Explanation: Useful for troubleshooting DNS issues, checking domain
 information, and resolving IP addresses.
 
-dig (Domain Information Groper):
+### dig (Domain Information Groper):
 
 Purpose: A versatile DNS tool for querying DNS servers.
 Example: `dig example.com`
@@ -264,7 +264,7 @@ obtaining specific record types
 
 ##                                                                           CONNECTIVITY TESTING COMMAND
 
-telnet:
+### telnet:
 
 Purpose: Connect to a remote server to test network connectivity.
 Example: `telnet example.com 80`
@@ -272,7 +272,7 @@ Explanation: Useful for checking if a specific port on a remote server is reacha
 
 ##                                                                           CONNECTIVITY TESTING COMMAND
 
-ncc:
+### ncc:
 
 Purpose: Trace the route packets take to reach a destination.
 Example: `traceroute example.com`
@@ -281,13 +281,13 @@ take through the internet.
 
 ##                                                                             IP ADDRESS CONFIGURATION
 
-ifconfig:
+### ifconfig:
 
 Purpose: Display and configure network interfaces.
 Example: `ifconfig`
 Explanation: View current network interface configurations and assign IP addresses.
 
-ip:
+### ip:
 
 Purpose: A versatile command for network configuration.
 Example: `ip addr show`
@@ -295,25 +295,25 @@ Explanation: Provides more detailed information than ifconfig and allows advance
 
 ##                                                                                NETWORK TOOLS
 
-netcat (nc):
+### netcat (nc):
 
 Purpose: Establish TCP/UDP connections, making it a versatile networking tool.
 Example: `nc -zv example.com 80`
 Explanation: Useful for checking if a port is open and for simple network testing.
 
-netstat:
+### netstat:
 
 Purpose: Display network statistics and connections.
 Example: `netstat -tulpn`
 Explanation: Helps monitor active network connections, ports, and routing tables.
 
-tcpdump:
+### tcpdump:
 
 Purpose: Capture and analyze network traffic.
 Example: `tcpdump -i eth0`
 Explanation: Useful for debugging network issues, analyzing packets, and monitoring network activity.
 
-wget:
+### wget:
 
 Purpose: Download files from the internet.
 Example: `wget https://example.com/file.txt`
@@ -327,7 +327,7 @@ Explanation: Supports a variety of protocols and is handy for testing APIs and f
 
 ##                                                               ACL , ARP, AND ROUTE TABLE COMMANDS:
 
-ACL (Access Control List):
+### ACL (Access Control List):
 
 Purpose: Set permissions on files or directories.
 Example: `setfacl -m u:jane:rw file.txt`
@@ -339,13 +339,13 @@ Purpose: Set permissions on files or directories.
 Example: `setfacl -m u:jane:rw file.txt`
 Explanation: Allows fine-grained control over file and directory permissions.
 
-ARP Table:
+### ARP Table:
 
 Purpose: Display or manipulate the ARP cache.
 Example: `arp -a`
 Explanation: Shows a mapping between IP addresses and MAC addresses on the local network.
 .
-Route Table:
+### Route Table:
 
 Purpose: Display or manipulate the IP routing table.
 Example: `route -n`
@@ -353,23 +353,23 @@ Explanation: Helps monitor active network connections, ports, and routing tables
 
 ##                                                                                     NAMESPACE
 
-Create a veth virtual-interface pair
+### Create a veth virtual-interface pair
 
 sudo ip link add 'myns-1-eth0' type veth peer name 'myns-2-eth0'
 .
-Assign the interfaces to the namespaces
+### Assign the interfaces to the namespaces
 
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 
-Assign an address to network interface
+### Assign an address to network interface
 
 sudo ip netns exec 'mynamespace-1' ip addr add 192.168.1.1/24 dev eth0
 Assign the interfaces to the namespaces
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 .
-Bring up the interfaces (the veth interfaces the loopback interfaces)
+### Bring up the interfaces (the veth interfaces the loopback interfaces)
 
 sudo ip netns exec 'mynamespace-1' ip link set 'lo' up
 sudo ip netns exec 'mynamespace-1' ip link set 'eth0' up
