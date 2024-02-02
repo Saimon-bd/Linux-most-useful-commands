@@ -115,7 +115,7 @@ HELP
 ##                                                                                   LINUX COMMAND FOR DEVOPS
 
 1. ls - List Files and Directories: List the contents of a directory.
-Example:
+2. Example:
 ```bash
 ls -l
 ```
