@@ -360,18 +360,23 @@ sudo ip link add 'myns-1-eth0' type veth peer name 'myns-2-eth0'
 ### Assign the interfaces to the namespaces
 
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
+
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 
-### Assign an address to network interface
+### Assign an address to the network interface
 
 sudo ip netns exec 'mynamespace-1' ip addr add 192.168.1.1/24 dev eth0
-Assign the interfaces to the namespaces
+
+### Assign the interfaces to the namespaces
+
 sudo ip link set 'myns-1-eth0' netns 'mynamespace-1'
+
 sudo ip link set 'myns-2-eth0' netns 'mynamespace-2'
 .
-### Bring up the interfaces (the veth interfaces the loopback interfaces)
+### Bring up the interfaces (the veth interfaces and the loopback interfaces)
 
 sudo ip netns exec 'mynamespace-1' ip link set 'lo' up
+
 sudo ip netns exec 'mynamespace-1' ip link set 'eth0' up
 
 
